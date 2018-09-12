@@ -1,0 +1,131 @@
+.edith {
+
+    &__controls {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        &-button {
+            .btn();
+            .btn_light-grey-black();
+        }
+    }
+
+    &-block-panel {
+        // font-family: 'Playfair Display', serif;
+        text-align: center;
+        background: @c_light_grey;
+        padding: .2rem 0;
+        font-size: 12px;
+        font-weight: 300;
+
+        &__expand,
+        &__put {
+            .btn();
+            .btn_small();
+        }
+
+        &__picker {
+
+            text-align: center;
+            padding: .16em 0;
+
+            &-option {
+                display: inline-block;
+                cursor: pointer;
+                margin: 0 .25rem;
+            }
+        }
+    }
+
+    &-block {
+
+        padding: 1.5rem 0 1rem 0;
+
+        &__controls {
+            text-align: right;
+            margin-top: 1.5rem;
+            
+        }
+
+        &__content {
+            position: relative;
+        }
+
+        &__ctrl {
+            .btn();
+            .btn_small();
+            .btn_light-grey-black();
+        }
+
+    }
+
+}
+
+
+.edith-block {
+
+    &-h1 {
+
+        &__paragraph,
+        p {
+            font-family: 'EB Garamond', serif;
+            font-size: 38px;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+
+    }
+
+    &-text {
+
+        &__paragraph,
+        p {
+            font-family: 'EB Garamond', serif;
+            font-size: 19px;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+
+    }
+
+
+    &-quote {
+
+        &__content &__paragraph,
+        &__content p {
+            position: relative;
+            font-family: 'EB Garamond', serif;
+            font-size: 24px;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+
+            &:before {
+                content: '"';
+                position: absolute;
+                top: -.3em;
+                left: -.15em;
+                font-family: 'EB Garamond', serif;
+                font-size: 128px;
+                opacity: .1;
+            }
+        }
+
+        &__author {
+            font-family: 'Open Sans', serif;
+            font-size: 12px;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+            min-height: 1em;
+            text-align: right;
+            opacity: .7;
+        }
+
+    }
+
+    &-inline-image {
+        img {
+            max-width: 100%;
+        }
+    }
+
+}

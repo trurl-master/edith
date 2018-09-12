@@ -1,0 +1,51 @@
+{
+  "name": "edith",
+  "version": "0.1.0",
+  "description": "Block based content editor",
+  "repository": "",
+  "author": "Ivan Galiatin <arxcaeli@gmail.com>",
+  "license": "MIT",
+  "main": "build/index.js",
+  "scripts": {
+    "precommit": "pretty-quick staged",
+    "build": "babel lib -d build",
+    "build:watch": "babel lib -w -d build",
+    "prepublishOnly": "yarn build",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o docs"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.4.10",
+    "@types/react": "^16.4.12",
+    "@types/react-dom": "^16.0.7",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.18.2",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "prettier": "^1.14.2",
+    "pretty-quick": "^1.6.0",
+    "prop-types": "^15.6.1",
+    "raw-loader": "^0.5.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "style-loader": "^0.21.0"
+  },
+  "dependencies": {
+    "draft-js": "^0.10.5",
+    "draft-js-export-html": "^1.2.0",
+    "draft-js-import-html": "^1.2.1",
+    "immutability-helper": "^2.7.1",
+    "react-autobind": "^1.0.6",
+    "react-contenteditable": "^2.1.5",
+    "react-dropzone": "^4.3.0"
+  }
+}

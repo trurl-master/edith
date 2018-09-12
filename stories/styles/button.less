@@ -1,0 +1,87 @@
+.btn {
+    position: relative;
+    font-family: inherit;
+	cursor: pointer;
+	margin-top: 0;
+	display: inline-block;
+	padding: .2em 1em .2em 1em;
+	box-sizing: border-box;
+	user-select: none;
+    border-radius: 2em;
+    border: 1px solid;
+	text-align: center;
+
+	border: 0;
+
+	font-size: 16px;
+	font-weight: 300;
+	text-decoration: none;
+
+	transition: color @t @e, background-color @t @e, border-color @t @e, box-shadow @t @e;
+
+	.icon {
+        height: 1em;
+        margin-right: .5em;
+        vertical-align: -.1em;
+	}
+
+	a& {
+		&:focus {
+			outline: 0;
+		}
+	}
+
+    &+& {
+        margin-left: .5rem;
+    }
+}
+
+
+.btn_small {
+	font-size: 12px;
+}
+
+.btn_normal {
+	font-size: 16px;
+}
+
+.btn_big {
+	font-size: 20px;
+}
+
+// STATES
+.btn__state_sending {
+	display: none;
+}
+
+.btn_sending {
+	.btn__state_normal {
+		display: none;
+	}
+
+	.btn__state_sending {
+		display: block;
+	}
+}
+
+.btn_light-grey-black {
+    color: black;
+	background-color: @c_light_grey;
+
+	&:active {
+		color: white;
+		background-color: black;
+		border-color: black;
+		transition: none;
+	}
+
+	&:disabled,
+	&.btn_disabled {
+		color: @c_medium_grey;
+		background-color: @c_light_grey;
+
+        &:active {
+            box-shadow: 0 0 0 2px @c_red inset;
+        }
+    }
+}
