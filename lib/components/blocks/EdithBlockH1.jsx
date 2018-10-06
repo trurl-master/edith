@@ -8,7 +8,7 @@ import { Editor, EditorState, RichUtils } from 'draft-js';
 import { stateToHTML } from 'draft-js-export-html';
 import { stateFromHTML } from 'draft-js-import-html';
 
-import Toolbar, { getSelectionRange, getSelectionCoords } from './Draft/Toolbar.jsx';
+import Toolbar, { getSelectionRange, getSelectionCoords } from './Draft/Toolbar';
 
 
 class EdithBlockH1 extends React.Component {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Edith, EdithImport } from '../lib';
-import { EdithAddBlock } from '../lib/components/blocks';
+
+import { Edith, EdithImport, EdithAddBlock } from '../lib';
 import EdithBlockCustomText from './custom/CustomText';
 
 import './styles/main.less';
@@ -74,12 +74,6 @@ storiesOf('Edith', module)
 						}
 					]}
 					onSave={content => {
-
-						// const e = document.createElement('div');
-						// e.innerHTML = content;
-
-						// document.body.appendChild(e)
-						// console.log(content);
 					}}
 				/>
 			</div>
@@ -137,7 +131,7 @@ storiesOf('Edith', module)
 						}
 					]}
 					onSave={content => {
-						console.log(content);
+
 					}}
 				/>
 			</div>

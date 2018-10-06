@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import update from 'immutability-helper';
 
 import { blocks } from '../components/blocks';
-import EdithBlock from '../components/EdithBlock.jsx';
-import EdithBlockPanel from '../components/EdithBlockPanel.jsx';
+import EdithBlock from '../components/EdithBlock';
+import EdithBlockPanel from '../components/EdithBlockPanel';
 
 import classNames from 'classnames';
 
@@ -164,25 +164,9 @@ class Edith extends React.Component {
             index = this.state.grabbedBlock,
             blocks = this.state.blocks;
 
-        // if (index === toIndex) {
-        //     this.setState(update(this.state, {
-        //         blocks: { [index]: { state: { grabbed: { $set: false } } } },
-        //         grabbedBlock: { $set: false }
-        //     }));
-
-        //     return
-        // }
-        // console.log('move', index, 'to', toIndex)
-
-        // console.log('before', blocks.map(b => b.id))
-
-        // blocks[index].state.grabbed = false;
-
         const block = blocks.splice(index, 1)[0];
         block.state.grabbed = false;
         blocks.splice(toIndex, 0, block)
-
-        // console.log('after', blocks.map(b => b.id))
 
         this.setState(update(this.state, {
             blocks: { $set: blocks },
@@ -233,15 +217,15 @@ class Edith extends React.Component {
 
     render() {
 
-        let userBlocks = this.props.blocks;
+        const userBlocks = this.props.blocks;
 
-        let cls = {
+        const cls = {
             edithControl: {
                 save: false
             }
         }
 
-        let somethingIsDirty = this.state.blocks.reduce((acc, block) => {
+        const somethingIsDirty = this.state.blocks.reduce((acc, block) => {
             return acc || block.dirty
         }, false);
 
