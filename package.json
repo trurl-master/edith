@@ -1,7 +1,15 @@
 {
   "name": "edith",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Block based content editor",
+  "keywords": [
+    "editor",
+    "react",
+    "draftjs",
+    "richtext",
+    "block",
+    "block based"
+  ],
   "author": "Ivan Galiatin <arxcaeli@gmail.com>",
   "repository": {
     "type": "git",
