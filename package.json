@@ -1,9 +1,12 @@
 {
   "name": "edith",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "Block based content editor",
-  "repository": "",
   "author": "Ivan Galiatin <arxcaeli@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trurl-master/edith.git"
+  },
   "license": "MIT",
   "main": "build/index.js",
   "scripts": {
@@ -16,8 +19,7 @@
   },
   "devDependencies": {
     "@storybook/react": "^3.4.11",
-    "@storybook/storybook-deployer": "^2.3.0",
-    "@types/react": "^16.4.14",
+    "@types/react": "^16.4.15",
     "@types/react-dom": "^16.0.8",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
