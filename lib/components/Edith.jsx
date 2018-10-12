@@ -166,7 +166,11 @@ class Edith extends React.Component {
 
         const block = blocks.splice(index, 1)[0];
         block.state.grabbed = false;
-        blocks.splice(toIndex, 0, block)
+        if (toIndex > index) {
+            blocks.splice(toIndex - 1, 0, block)
+        } else {
+            blocks.splice(toIndex, 0, block)
+        }
 
         this.setState(update(this.state, {
             blocks: { $set: blocks },
