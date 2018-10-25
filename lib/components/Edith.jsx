@@ -11,6 +11,15 @@ import EdithBlockPanel from '../components/EdithBlockPanel';
 import classNames from 'classnames';
 
 
+function getMapValue(obj, key, def) {
+    if (obj.hasOwnProperty(key)) {
+        return obj[key];
+    }
+
+    return def;
+}
+
+
 class Edith extends React.Component {
 
 
@@ -222,10 +231,18 @@ class Edith extends React.Component {
     render() {
 
         const userBlocks = this.props.blocks;
+        let cls;
 
-        const cls = {
-            edithControl: {
-                save: false
+        if (typeof this.props.classes !== 'undefined') {
+
+            const { classes } = this.props;
+
+            cls = {
+                root: getMapValue(classes, 'root', false)
+            }
+        } else {
+            cls = {
+                root: false
             }
         }
 
@@ -234,10 +251,10 @@ class Edith extends React.Component {
         }, false);
 
         return (
-            <div className="edith">
+            <div className={classNames('edith', cls.root)}>
                 <div className="edith__controls">
                     <button
-                        className={classNames('edith__controls-button', cls.edithCtrl)}
+                        className={classNames('edith__controls-button')}
                         disabled={!somethingIsDirty || this.state.grabbedBlock !== false}
                         onClick={this.clickSave}>{this.props.strings.controls.save}</button>
                 </div>
@@ -303,6 +320,7 @@ Edith.propTypes = {
     import: PropTypes.array,
     blocks: PropTypes.array,
     strings: PropTypes.object,
+    classes: PropTypes.object,
 
     onSave: PropTypes.func
 };

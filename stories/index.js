@@ -15,6 +15,9 @@ storiesOf('Edith', module)
 			<div className="container">
 				<Edith
 					import={EdithImport.fromHTML(content1)}
+					classes={{
+						root: 'my-edithor'
+					}}
 					strings={{
 						controls: {
 							save: 'Save'
