@@ -49,10 +49,17 @@ storiesOf('Edith', module)
 							name: 'Text',
 							label: 'Text',
 							config: {
+								editor: {
+									customStyleMap: {
+										'ITALIC': {
+											color: 'red'
+										}
+									}
+								},
 								toolbar: [
-									{ label: 'B', style: 'BOLD' },
-									{ label: 'I', style: 'ITALIC' },
-									{ label: 'U', style: 'UNDERLINE' },
+									{ label: 'Bold', style: 'BOLD' },
+									{ label: 'Italic and Red', style: 'ITALIC' },
+									{ label: 'Underline', style: 'UNDERLINE' },
 								]
 							}
 						},

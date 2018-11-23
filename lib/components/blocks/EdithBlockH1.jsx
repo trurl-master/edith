@@ -75,15 +75,7 @@ class EdithBlockH1 extends React.Component {
     }
 
     style(contentBlock) {
-        // const type = contentBlock.getType();
-
-        // console.log(type, contentBlock.getKey())
-
         return 'edith-block-h1__paragraph';
-
-        // if (type === 'p') {
-        //     return 'edith-';
-        // }
     }
 
     getContent(format) {
@@ -117,6 +109,7 @@ class EdithBlockH1 extends React.Component {
                     editorState={this.state.editorState}
                     onChange={this.onChange}
                     blockStyleFn={this.style}
+                    {...config.editor}
                     ref={(c) => { this.editor = c }}
                 />
                 <Toolbar
