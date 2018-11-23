@@ -52,7 +52,8 @@ storiesOf('Edith', module)
 								editor: {
 									customStyleMap: {
 										'ITALIC': {
-											color: 'red'
+											color: 'red',
+											fontStyle: 'italic'
 										}
 									}
 								},
